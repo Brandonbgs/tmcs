@@ -1,0 +1,360 @@
+body {
+  margin: 0;
+  background-color: rgb(224, 225, 220);
+  font-family: "Roboto", sans-serif;
+  color: white;
+
+}
+
+/* Header Styles */
+.HomeLogoImage {
+  height: 4rem;          /* Matches typical nav text height (~24px) */
+  object-fit: contain;     /* Ensures the image scales without distortion */
+  vertical-align: middle;  /* Aligns it nicely with text */
+}
+
+header {
+  background-color: rgb(224, 225, 220);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  flex-wrap: wrap;
+}
+
+header h1 {
+  font-size: 1.5rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 50px;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+nav ul li a {
+  color: rgb(0, 68, 90);
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+a:hover {
+  color: rgb(167, 193, 167);
+}
+
+/*Team Section*/
+.TopBox h1 {
+  color: rgb(0, 68, 90);
+  font-size: 4rem;
+  margin-left: 2rem;
+}
+
+
+/* Layout: image left, text right */
+.ManagingDirector {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  justify-content: center; /* centers the whole group */
+  margin-top: 2rem;
+}
+
+.ManagingDirector img {
+  width: 20rem;
+  height: 20rem;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Name above paragraph */
+.DirectorInfo h1 {
+  margin: 0;
+  color: rgb(0, 68, 90);
+}
+
+.DirectorInfo h2{
+  margin: 0;
+  color: #333;
+}
+
+.DirectorInfo p{
+  color: black;
+}
+
+.DirectorInfo {
+  max-width: 30rem;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+    flex-wrap: wrap; /* Makes it responsive */
+}
+
+.flip-card {
+    background-color: transparent;
+    width: 250px;
+    height: 350px;
+    perspective: 1000px; 
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.flip-card-front img {
+    width: 100%;
+    height: 65%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.flip-card-front h3 {
+    margin: 10px 0 5px;
+    text-align: center;
+    color: rgb(0, 68, 90);
+}
+
+.flip-card-front p {
+    text-align: center;
+    color: #555;
+}
+
+.flip-card-back {
+    background-color: #2c3e50;
+    color: white;
+    transform: rotateY(180deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
+
+/*About section*/
+#About {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  padding: 3rem 2rem;
+  flex-wrap: wrap; /* allows stacking on small screens */
+}
+
+.AboutTitle {
+  flex: 1;
+  max-width: 50%;
+  font-size: 1.1rem;
+  line-height: 1.7;
+
+  /* Glassmorphism added */
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  color: rgb(0, 68, 90);
+}
+
+.AboutTitle p{
+  color: black;
+}
+
+.AboutImg {
+  flex: 1;
+  max-width: 50%;
+  display: flex;
+  justify-content: flex-end;
+
+  /* Glassmorphism added */
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 1rem;
+}
+
+.AboutImage {
+  width: 100%;
+  max-width: 35rem;
+  height: auto;
+  border-radius: 10px;
+}
+
+/*Why Section*/
+.WhyBox {
+  padding: 2rem;
+}
+
+.WhyTagline h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color:rgb(0, 68, 90);
+}
+
+.WhyContentBox {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns side by side */
+  gap: 2rem;
+}
+
+.WhyContentBox > div {
+  padding: 1.5rem;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1); /* light translucent */
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* Safari support */
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.WhyContentBox > div:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.2);
+}
+
+.WhyContentBox h1 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color:rgb(0, 68, 90)
+}
+
+.WhyContentBox p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color:rgb(0, 0, 0);
+}
+
+/* Font Awesome CDN (Add in <head>) */
+/* <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" /> */
+
+.site-footer {
+  background-color: #002c3e;
+  color: #ffffff;
+  padding: 20px 20px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.site-footer h3 {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #00c2cb;
+}
+
+.footer-about,
+.footer-links,
+.footer-contact,
+.footer-social {
+  flex: 1 1 220px;
+}
+
+.footer-links ul,
+.footer-contact ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li,
+.footer-contact ul li {
+  margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-links ul li a:hover {
+  color: #00c2cb;
+}
+
+.footer-social .social-icons a {
+  color: #ffffff;
+  font-size: 18px;
+  margin-right: 15px;
+  transition: color 0.3s;
+}
+
+.footer-social .social-icons a:hover {
+  color: #00c2cb;
+}
+
+.footer-bottom {
+  border-top: 1px solid #004a64;
+  text-align: center;
+  margin-top: 40px;
+  padding-top: 20px;
+  font-size: 14px;
+}
+
+.footer-bottom a {
+  color: #00c2cb;
+  text-decoration: none;
+  margin: 0 8px;
+}
+
+.footer-bottom a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-about,
+  .footer-links,
+  .footer-contact,
+  .footer-social {
+    width: 100%;
+  }
+
+  .footer-social .social-icons a {
+    margin-right: 10px;
+  }
+}

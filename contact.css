@@ -1,0 +1,230 @@
+body {
+  margin: 0;
+  background-color: rgb(224, 225, 220);
+  font-family: "Roboto", sans-serif;
+  color: white;
+
+}
+
+/* Header Styles */
+.HomeLogoImage {
+  height: 4rem;          /* Matches typical nav text height (~24px) */
+  object-fit: contain;     /* Ensures the image scales without distortion */
+  vertical-align: middle;  /* Aligns it nicely with text */
+}
+
+header {
+  background-color: rgb(224, 225, 220);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  flex-wrap: wrap;
+}
+
+header h1 {
+  font-size: 1.5rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 50px;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+nav ul li a {
+  color: rgb(0, 68, 90);
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+a:hover {
+  color: rgb(167, 193, 167);
+}
+
+/*Contact Section*/
+.ContactTaglineBox {
+  padding: 1rem;
+}
+
+.ContactTagline h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.ContactContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.ContactTagline p {
+  width: 20rem;
+  font-size: 1.5rem;
+  margin-left: 3rem;
+  font-size: 3rem;
+  color:rgb(0, 68, 90);
+}
+
+.social-icons {
+  margin-left: 3rem;
+  margin-top: 1rem;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.social-icons a {
+  font-size: 2rem;
+  color: rgb(0, 68, 90);
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: rgb(167, 193, 167);
+}
+
+
+.ContactFormBox {
+  padding: 2rem;
+  width: 25rem;
+  margin-right: 3rem;
+
+  /* Glassmorphism */
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  color: white;
+}
+
+.ContactFormBox form {
+  display: flex;
+  flex-direction: column;
+  color:rgb(0, 68, 90);
+}
+
+.ContactFormBox input,
+.ContactFormBox textarea {
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+.ContactFormBox button {
+  padding: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.ContactFormBox button:hover{
+  color:rgb(167, 193, 167);
+}
+
+/* Font Awesome CDN (Add in <head>) */
+/* <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" /> */
+
+.site-footer {
+  background-color: #002c3e;
+  color: #ffffff;
+  padding: 20px 20px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.site-footer h3 {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #00c2cb;
+}
+
+.footer-about,
+.footer-links,
+.footer-contact,
+.footer-social {
+  flex: 1 1 220px;
+}
+
+.footer-links ul,
+.footer-contact ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li,
+.footer-contact ul li {
+  margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-links ul li a:hover {
+  color: #00c2cb;
+}
+
+.footer-social .social-icons a {
+  color: #ffffff;
+  font-size: 18px;
+  margin-right: 15px;
+  transition: color 0.3s;
+}
+
+.footer-social .social-icons a:hover {
+  color: #00c2cb;
+}
+
+.footer-bottom {
+  border-top: 1px solid #004a64;
+  text-align: center;
+  margin-top: 40px;
+  padding-top: 20px;
+  font-size: 14px;
+}
+
+.footer-bottom a {
+  color: #00c2cb;
+  text-decoration: none;
+  margin: 0 8px;
+}
+
+.footer-bottom a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-about,
+  .footer-links,
+  .footer-contact,
+  .footer-social {
+    width: 100%;
+  }
+
+  .footer-social .social-icons a {
+    margin-right: 10px;
+  }
+}

@@ -1,0 +1,366 @@
+body {
+  margin: 0;
+  background-color: rgb(224, 225, 220);
+  font-family: "Roboto", sans-serif;
+  color: white;
+
+}
+
+/* Header Styles */
+.HomeLogoImage {
+  height: 4rem;          /* Matches typical nav text height (~24px) */
+  object-fit: contain;     /* Ensures the image scales without distortion */
+  vertical-align: middle;  /* Aligns it nicely with text */
+}
+
+header {
+  background-color: rgb(224, 225, 220);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  flex-wrap: wrap;
+}
+
+header h1 {
+  font-size: 1.5rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 50px;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+nav ul li a {
+  color: rgb(0, 68, 90);
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+a:hover {
+  color: rgb(167, 193, 167);
+}
+
+/* FAQ Section Styles */
+
+/* Wrapper for the entire FAQ section */
+.faq-wrapper {
+  padding: 50px 5%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Centered FAQ title */
+.faqTagline {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.faqTagline h1 {
+  font-size: 6rem;
+  margin: 0 auto;
+  color: rgb(0, 68, 90);
+  line-height: 1;
+}
+
+/* FAQ grid: 2 columns side by side */
+.faq-grid {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+/* Each column holds 3 items */
+.faq-column {
+  flex: 1 1 45%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-width: 300px;
+}
+
+/* Individual FAQ items */
+.faq-item {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 20px;
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  color: black;
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+/* FAQ question text */
+.faq-question {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #003941;
+}
+
+/* FAQ answer: hidden until hover */
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.4s ease, opacity 0.4s ease;
+  margin-top: 10px;
+  color: #1e1e1e;
+  line-height: 1.5;
+  font-size: 1rem;
+}
+
+/* Reveal answer on hover */
+.faq-item:hover .faq-answer {
+  max-height: 300px;
+  opacity: 1;
+}
+
+/* Responsive stacking for mobile */
+@media (max-width: 768px) {
+  .faq-column {
+    flex: 1 1 100%;
+  }
+
+  .faqTagline h1 {
+    font-size: 4rem;
+  }
+}
+
+/* Blog & Newsletter Section */
+#blog-newsletter {
+  padding: 60px 5%;
+  color: #003941;
+}
+
+.blog-newsletter-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Blog Section */
+.blog-section h2,
+.newsletter-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: rgb(0, 68, 90);
+  text-align: center;
+}
+
+.blog-cards {
+  display: flex;
+  gap: 30px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.blog-card {
+  flex: 1 1 30%;
+  background: rgba(0, 68, 90, 0.05);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.blog-card:hover {
+  transform: translateY(-5px);
+}
+
+.blog-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #003941;
+}
+
+.blog-card p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.blog-card a {
+  color: #004d5c;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.blog-card a:hover {
+  text-decoration: underline;
+}
+
+/* Newsletter Section */
+.newsletter-section {
+  text-align: center;
+  margin-top: 60px;
+}
+
+.newsletter-section p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  color: #1e1e1e;
+}
+
+.newsletter-form {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.newsletter-form input[type="email"] {
+  padding: 0.8rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 300px;
+  font-size: 1rem;
+}
+
+.newsletter-form button {
+  padding: 0.8rem 1.5rem;
+  background-color: rgb(0, 68, 90);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+.newsletter-form button:hover {
+  background-color: rgb(167, 193, 167);
+  color: #003941;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .blog-cards {
+    flex-direction: column;
+  }
+
+  .blog-card {
+    flex: 1 1 100%;
+  }
+
+  .newsletter-form {
+    flex-direction: column;
+  }
+
+  .newsletter-form input[type="email"],
+  .newsletter-form button {
+    width: 100%;
+  }
+}
+
+
+
+/* Font Awesome CDN (Add in <head>) */
+/* <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" /> */
+
+.site-footer {
+  background-color: #002c3e;
+  color: #ffffff;
+  padding: 20px 20px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.site-footer h3 {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #00c2cb;
+}
+
+.footer-about,
+.footer-links,
+.footer-contact,
+.footer-social {
+  flex: 1 1 220px;
+}
+
+.footer-links ul,
+.footer-contact ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li,
+.footer-contact ul li {
+  margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-links ul li a:hover {
+  color: #00c2cb;
+}
+
+.footer-social .social-icons a {
+  color: #ffffff;
+  font-size: 18px;
+  margin-right: 15px;
+  transition: color 0.3s;
+}
+
+.footer-social .social-icons a:hover {
+  color: #00c2cb;
+}
+
+.footer-bottom {
+  border-top: 1px solid #004a64;
+  text-align: center;
+  margin-top: 40px;
+  padding-top: 20px;
+  font-size: 14px;
+}
+
+.footer-bottom a {
+  color: #00c2cb;
+  text-decoration: none;
+  margin: 0 8px;
+}
+
+.footer-bottom a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-about,
+  .footer-links,
+  .footer-contact,
+  .footer-social {
+    width: 100%;
+  }
+
+  .footer-social .social-icons a {
+    margin-right: 10px;
+  }
+}

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>TM Consultancy & Services</title>
+    <link rel="stylesheet" href="contact.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+    <header>
+        <img src="TMCS Logo Removed.png" alt="TMCS Logo" class="HomeLogoImage">
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="team.html">Meet the team</a></li>
+            <li><a href="services.html">Our Services</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </nav>
+      </header>
+
+<section id="Contact">
+  <div class="ContactTaglineBox">
+    <div class="ContactTagline">
+      <h1></h1>
+      <div class="ContactContent">
+        <p>
+          Contact Us Today For The Best Pricing Solutions.
+        </p>
+
+<div class="social-icons">
+  <a href="https://www.instagram.com/tmcs.cs/" target="_blank"><i class="fab fa-instagram"></i></a>
+  <a href="https://www.facebook.com/tmconsultservices?mibextid=wwXIfr&rdid=krAnOa1Oks7jGeOJ&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F173D5FTcxL%2F%3Fmibextid%3DwwXIfr#" target="_blank"><i class="fab fa-facebook"></i></a>
+  <a href="https://www.linkedin.com/in/tm-consultancy-and-services-490549364/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank"><i class="fab fa-linkedin"></i></a>
+</div>
+
+        <div class="ContactFormBox">
+          <form id="contactForm">
+            <label for="name">Name:</label><br />
+            <input type="text" id="name" name="name" /><br />
+
+            <label for="email">Email:</label><br />
+            <input type="email" id="email" name="email" /><br />
+
+            <label for="message">Message:</label><br />
+            <textarea id="message" name="message"></textarea><br />
+
+            <button type="submit">Send</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-about">
+      <h3>About Us</h3>
+      <p>We provide expert HR Management Services to help businesses focus on what they do best. Our team ensures seamless HR operations, compliance, and employee satisfaction.</p>
+    </div>
+
+    <div class="footer-links">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Careers</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-contact">
+      <h3>Contact Us</h3>
+      <ul>
+        <li><strong>Phone:</strong> +60 16-623 8648</li>
+        <li><strong>Email:</strong> tmservices.consult@gmail.com</li>
+        <li><strong>Address:</strong> 123 Business St., Suite 456, City, Country</li>
+      </ul>
+    </div>
+
+    <div class="footer-social">
+      <h3>Follow Us</h3>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/tmconsultservices?mibextid=wwXIfr&rdid=krAnOa1Oks7jGeOJ&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F173D5FTcxL%2F%3Fmibextid%3DwwXIfr#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.linkedin.com/in/tm-consultancy-and-services-490549364/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://www.instagram.com/tmcs.cs/?igsh=Nm11Zjh5b3UzeWpz&utm_source=qr#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2025 Total Management Consultancy & Services. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+  </div>
+</footer>
+
+<script>
+document.getElementById("contactForm").addEventListener("submit", async function (e) {
+  e.preventDefault();
+
+  const data = {
+    name: document.getElementById("name").value,
+    email: document.getElementById("email").value,
+    message: document.getElementById("message").value
+  };
+
+  try {
+    const response = await fetch("http://localhost:3000/api/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(data)
+    });
+
+    const result = await response.json();
+
+    if (result.success) {
+      alert("✅ Message sent!");
+      document.getElementById("contactForm").reset();
+    } else {
+      alert("❌ Error: " + "Server is currently busy. Please try again shortly. E1.");
+    }
+  } catch (error) {
+    console.error("Error submitting form:", error);
+    alert("❌ Server error. Please try again later. E2.");
+  }
+});
+
+</script>
+
+
+</body>
+</html>

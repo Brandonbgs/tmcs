@@ -1,0 +1,269 @@
+body {
+  margin: 0;
+  background-color: rgb(224, 225, 220);
+  font-family: "Roboto", sans-serif;
+  color: white;
+}
+
+/* Header Styles */
+.HomeLogoImage {
+  height: 4rem;          /* Matches typical nav text height (~24px) */
+  object-fit: contain;     /* Ensures the image scales without distortion */
+  vertical-align: middle;  /* Aligns it nicely with text */
+}
+
+header {
+  background-color: rgb(224, 225, 220);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  flex-wrap: wrap;
+}
+
+header h1 {
+  font-size: 1.5rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 50px;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+nav ul li a {
+  color: rgb(0, 68, 90);
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+a:hover {
+  color: rgb(167, 193, 167);
+}
+
+/* Services section */
+.ServicesTitle h1{
+  color: rgb(0, 68, 90);
+  margin-left: 2rem;
+  font-size:4rem;
+}
+
+.ServicesTitle p{
+  width: 50rem;
+  margin-left: 2rem;
+  color:#333;
+}
+
+.service-block h1{
+  color: rgb(0, 68, 90);
+  text-align: center;
+}
+
+.service-block h2{
+  color: #3333337e;
+  margin-left: 44%;
+  font-size: 10px;
+}
+
+.service-block p{
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 0.6s ease-out, max-height 0.6s ease-out;
+  margin-left: 44%;
+  color: black;
+}
+
+.service-block:hover p
+ {
+  opacity: 1;
+  max-height: 200px; /* enough space to reveal */
+}
+
+.service-block:hover{
+  background-color:rgb(167, 193, 167);
+}
+
+.service-block h3{
+  margin-left:2rem;
+  color:rgb(0, 68, 90);
+}
+
+.service-block .title-row {
+  display: flex;
+  align-items: center; /* vertically align */
+
+}
+
+
+/*.Payroll:hover p{
+  margin-left:50%;
+  color: black;
+  transition: width 2s, height 4s, background-color 3s;
+}*/
+
+
+
+/*Testimonial*/
+/* Grid container */
+/* MAIN GRID LAYOUT */
+#Testimonial h1{
+  color: rgb(0, 68, 90);
+  margin-left: 20px;
+  margin-top: 50px;
+}
+
+.MainGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;   /* Left + Right main columns */
+    grid-template-rows: auto auto auto; /* 3 main rows */
+    gap: 2rem;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 3rem;
+}
+
+/* Base styling */
+.box {
+    background: white;
+    color: rgb(0, 68, 90);
+    border-radius: 20px;
+    padding: 1.5rem;
+    border: 2px solid #ddd;
+    font-size: 15px;
+}
+
+/* LEFT tall box — spans 2 rows */
+.LeftBox {
+    grid-column: 1;
+    grid-row: 1;  /* covers row 1 + 2 */
+}
+
+/* RIGHT top box */
+.RightTop {
+    grid-column: 2;
+    grid-row: 1;
+    background-color: rgb(167, 193, 167);
+}
+
+/* RIGHT mini-grid for the 2 boxes */
+.RightMiniGrid {
+    grid-column: 2;
+    grid-row: 2;  
+
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2 side-by-side boxes */
+    gap: 1.5rem;
+}
+
+/* Bottom full-width box */
+.FullBottom {
+    grid-column: 1 ; /* full width */
+    grid-row: 2;
+}
+
+
+/* Font Awesome CDN (Add in <head>) */
+/* <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" /> */
+
+.site-footer {
+  background-color: #002c3e;
+  color: #ffffff;
+  padding: 20px 20px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.site-footer h3 {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #00c2cb;
+}
+
+.footer-about,
+.footer-links,
+.footer-contact,
+.footer-social {
+  flex: 1 1 220px;
+}
+
+.footer-links ul,
+.footer-contact ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li,
+.footer-contact ul li {
+  margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-links ul li a:hover {
+  color: #00c2cb;
+}
+
+.footer-social .social-icons a {
+  color: #ffffff;
+  font-size: 18px;
+  margin-right: 15px;
+  transition: color 0.3s;
+}
+
+.footer-social .social-icons a:hover {
+  color: #00c2cb;
+}
+
+.footer-bottom {
+  border-top: 1px solid #004a64;
+  text-align: center;
+  margin-top: 40px;
+  padding-top: 20px;
+  font-size: 14px;
+}
+
+.footer-bottom a {
+  color: #00c2cb;
+  text-decoration: none;
+  margin: 0 8px;
+}
+
+.footer-bottom a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-about,
+  .footer-links,
+  .footer-contact,
+  .footer-social {
+    width: 100%;
+  }
+
+  .footer-social .social-icons a {
+    margin-right: 10px;
+  }
+}
